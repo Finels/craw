@@ -13,7 +13,7 @@ class SpiderMain(object):
         self.parser = html_parser.HtmlParser()
         self.outputer = html_outputer.HtmlOutputer()
 
-    def craw(self):
+    def craw(self,root_url):
         cout = 1
         self.urls.add_new_url(root_url)
         while self.urls.has_new_url():
