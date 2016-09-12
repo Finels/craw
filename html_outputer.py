@@ -1,6 +1,7 @@
 class HtmlOutputer(object):
     '''
     网页输出器，可以自定义输出格式
+    XXXXXX
     '''
 
     def __init__(self):
