@@ -2,7 +2,9 @@ import html_downloader
 import html_outputer
 import html_parser
 import url_manager
-
+'''
+the dispatch controller for the main programme,it will call all the self-modules 
+'''
 
 class SpiderMain(object):
     def __init__(self):
