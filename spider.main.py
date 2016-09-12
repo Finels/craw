@@ -25,7 +25,7 @@ class SpiderMain(object):
                 self.urls.add_new_urls(new_urls)
                 self.outputer.collect_data(new_data)
 
-                if cout==1000:
+                if cout==50:
                     break
                 cout+=1
             except:
@@ -36,6 +36,6 @@ class SpiderMain(object):
 
 
 if __name__ == "__main__":
-    root_url = "http://baike.baidu.com/view/21087.htm"
+    root_url = "http://www.kx1d.com/xieegif/31196.html"
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)
