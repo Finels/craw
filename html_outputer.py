@@ -1,6 +1,7 @@
+# -*- coding: gbk -*-
 class HtmlOutputer(object):
     '''
-    ç½‘é¡µè¾“å‡ºå™¨ï¼Œå¯ä»¥è‡ªå®šä¹‰è¾“å‡ºæ ¼å¼
+    ÍøÒ³Êä³öÆ÷£¬¿ÉÒÔ×Ô¶¨ÒåÊä³ö¸ñÊ½
     XXXXXX
     '''
 
@@ -15,20 +16,21 @@ class HtmlOutputer(object):
     def output_html(self):
         fout = open('output.html', 'w')
         fout.write("<html>")
-        fout.write("<head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /></head")
+        fout.write("<head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=GBK\" /></head")
         fout.write("<body>")
         fout.write("<table>")
         for data in self.datas:
             fout.write("<tr>")
             fout.write("<td>%s</td>" % data['url'])
-            fout.write("<td>%s</td>" % data['title'].encode('GBK'))
-            fout.write("<td>%s</td>" % data['img'].encode('GBK'))
+            fout.write("<td>"+(u""+data['title'])+"</td>")
+            fout.write("<td>"+(u""+data['img'])+"</td>")
             fout.write("</tr>")
         fout.write("</table>")
         fout.write("</body")
         fout.write("</html>")
+        fout.close()
 
         # '''
-        # å›¾ç‰‡æ ¼å¼è¾“å‡º
+        # Í¼Æ¬¸ñÊ½Êä³ö
         # '''
         # for data in self.datas:
